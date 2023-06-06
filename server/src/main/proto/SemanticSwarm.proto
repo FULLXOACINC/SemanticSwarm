@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package io.semanticswarm.server;
+
+option java_multiple_files = true;
+option java_package = "io.semanticswarm.server";
+option java_outer_classname = "SemanticSwarm";
+option objc_class_prefix = "SSM";
+
+service SemanticSwarmMemory {
+  rpc SemanticSwarmMemorySearchRelationship (SemanticSwarmMemoryRelationshipRequest) returns (SemanticSwarmMemoryRelationshipResponse) {}
+}
+
+message SemanticSwarmMemoryRelationshipRequest {
+  string name = 1;
+}
+
+message SemanticSwarmMemoryRelationshipResponse {
+  string message = 1;
+}
